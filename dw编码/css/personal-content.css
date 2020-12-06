@@ -1,0 +1,64 @@
+.dior .content{ margin-top:20px;}
+.dior .content .con_con{width:1200px; margin:0 auto;}
+.dior .content .con_con .left{width:170px; border:#CCC 1px solid; text-align:center; float:left;}
+.dior .content .con_con .left .caid{line-height:30px; height:30px; width:170px; text-align:center; font-size:14px; background:#EAEAEA;border-bottom:#CCC 1px solid;}
+.dior .content .con_con .left .caid img{margin-right:10px;}
+.dior .content .con_con .left ul li{line-height:30px; height:30px; width:170px;background:#f0eeee; border-bottom:#CCC 1px solid;}
+.dior .content .con_con .left ul li:hover{background:#FFF;}
+.dior .content .con_con .left ul li a{font-size:14px;}
+.dior .content .con_con .left ul li a:hover{color:#000; text-decoration:none;}
+.dior .content .con_con .right{float:left; width:990px; margin-left:20px;}
+.dior .content .con_con .right .person{ border:1px #CCCCCC solid; height:160px;}
+.dior .content .con_con .right .person .heshe{float:left; width:410px; border-right:1px #CCCCCC solid; padding-left:20px; padding-top:20px;}
+.dior .content .con_con .right .person .heshe .myphoto{float:left;}
+.dior .content .con_con .right .person .heshe .mylist{ float:left; margin-left:20px; margin-bottom:20px;}
+.dior .content .con_con .right .person .heshe .mylist span{font-size:14px;}
+.dior .content .con_con .right .person .heshe .mylist .one,.dior .content .con_con .right .person .heshe .mylist .two,.dior .content .con_con .right .person .heshe .mylist .three,.dior .content .con_con .right .person .heshe .mylist .fore{height:30px; line-height:30px;}
+.dior .content .con_con .right .person .heshe .mylist .two a{ padding-left:10px;}
+.dior .content .con_con .right .person .heshe .mylist .three a{text-decoration:none;}
+.dior .content .con_con .right .person .heshe .mylist .three img{ padding-left:5px;}
+.dior .content .con_con .right .person .heshe .mylist .fore .hx{ display:inline-block; margin-left:20px;}
+.dior .content .con_con .right .person .heshenews{ width:280px;height:140px; float:left;border-right:1px #CCCCCC solid; padding-left:20px; padding-top:20px;}
+.dior .content .con_con .right .person .heshenews .more{margin-top:-25px;float:right; display:inline-block; background:url(../images/more.png) no-repeat;height:15px; line-height:15px; text-align:center;color:#FFF;margin-right:10px;width:40px;}
+.dior .content .con_con .right .person .heshenews span{ display:inline-block;font-size:14px; padding-bottom:10px;}
+.dior .content .con_con .right .person .heshenews ul li{ width:270px;height:20px; line-height:20px; border-bottom:1px #CCCCCC solid;}
+.dior .content .con_con .right .person .day{background:#6BB82D; border:#6BB82D 1px solid; margin-left:15px; margin-right:15px; margin-top:10px;width:210px; height:140px; /*margin-right:30px;*/ float:left;}
+.dior .content .con_con .right .person .day .title{ height:0px;}
+.dior .content .con_con .right .person .day .title a img{margin-left:5px;margin-right:5px;}
+.dior .content .con_con .right .person .day .title span{font-size:14px; height:20px; line-height:20px; text-align:center;margin-left:62px;margin-right:62px;color:#FFF;/* padding-bottom:10px;*//*width:200px;fo line-height:30px;height:30px;*/}
+.dior .content .con_con .right .person .day .content{background:#FFF; height:120px; text-align:center; color:#6BB82D;}
+.dior .content .con_con .right .person .day .content em{ display:block;font-size:60px;}
+.dior .content .con_con .right .person .day .content span{display:block;}
+.dior .content .con_con .right .mypay .title_2 div{float:left; margin-right:30px;}
+.dior .content .con_con .right .mypay .title_2 .title_3{float:right;}
+.dior .content .con_con .right .mypay .table_1{background:#333; color:#FFF;}
+.dior .content .con_con .right .mypay .table_1 tbody tr th{ text-align:center; height:30px; line-height:30px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .one,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .one{width:304px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .two,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .two{width:120px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .three,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .three{width:70px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .four,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .four{width:120px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .five,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .five{width:120px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .six,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .six{width:130px;}
+.dior .content .con_con .right .mypay .table_1 tbody tr .seven,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .seven{width:148px;}
+.dior .content .con_con .right .mypay .dd_tt{background:#D0BCA3; height:30px; line-height:30px;}
+.dior .content .con_con .right .mypay .dd_tt input{margin-left:10px;}
+.dior .content .con_con .right .mypay .dd_tt .scdd{float:right; background:url(../images/jjt.png) no-repeat; border:none; /*margin-right:10px;*/ width:22px; margin-top:5px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2{background:#ECE1D3; text-align:center;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .one,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .two,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .three,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .four,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .five,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .six,{float:left;height:120px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .one{ text-align:left;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tr .seven{float:right;height:120px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .one a img{float:left; margin:20px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .one a ul{float:left; margin-top:20px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .two,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .four,.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .five{height:120px; line-height:120px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .seven ul{margin-top:35px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .seven ul li a{ display:inline-block;background:url(../images/an.png) no-repeat; width:75px; height:20px; line-height:20px; text-align:center; color:#FFF;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .three{ height:20px; line-height:20px;}
+.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .six ul li，.dior .content .con_con .right .mypay .dd_1 .table_2 tbody tr .seven ul li{line-height:20px; height:20px;}
+.dior .content .con_con .right .hepay .hp_tt{ /*background:#096;*/}
+.dior .content .con_con .right .hepay .hp_tt h1{ font-size:14px; margin-left:10px;}
+.dior .content .con_con .right .hepay .hp_tt .more{float:right; display:inline-block; background:url(../images/more.png) no-repeat;height:15px; line-height:15px; text-align:center;color:#FFF;margin-right:10px;margin-top:-15px;width:40px;}
+.dior .content .con_con .right .hepay .hp_cn .dp_1{float:left; margin:10px;}
+.dior .content .con_con .right .hepay .hp_cn .dp_1:hover{ border:#FFDBDE 1px solid;}
+.dior .content .con_con .right .hepay .hp_cn .dp_1 dl dd{margin-left:20px;}
+.dior .content .con_con .right .hepay .hp_cn .dp_1 dl dd .p_2{color:#666;}
+.dior .content .con_con .right .hepay .hp_cn .dp_1 dl dd .p_3{color:#999;}

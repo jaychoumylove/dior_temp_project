@@ -1,0 +1,446 @@
+																<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+<link rel="stylesheet" type="text/css" href="css/dior_vip_top.css"/>
+<link rel="stylesheet" type="text/css" href="css/dior_vip_content.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//top鼠标机内展示特效 start
+		$(".li_1").hover(
+			function(){
+				$(this).children("ul").slideDown(500);
+				$(this).find("img").attr("src","images/sl.png");
+			},
+			function(){
+				$(this).children("ul").slideUp(500);
+				$(this).find("img").attr("src","images/xl.png");
+			}	
+		)
+		//top鼠标机内展示特效 end
+		
+		//nav标题进入特效 start
+		$(".nav_con ul .other:eq(3)").addClass("special");
+		$(".nav_con ul .other").hover(function(){
+			$(this).addClass("special").siblings().removeClass("special");
+			},
+			function(){
+				$(".nav_con ul .other:eq(3)").addClass("special").siblings().removeClass("special");
+			}
+		)
+		//nav标题进入特效 end
+		
+		//所有产品展示特效 start
+		$("#all").hover(function(){
+			$(this).children("ul").fadeIn(1000);
+		},
+		function(){
+			$(this).children("ul").fadeOut(1000);
+		});
+		//所有产品展示特效 end
+		
+		//banner图特效 start
+		var k=0;
+		var t;
+		$(".banner_an ul li").hover(   //鼠标进入和出去的事件
+			function(){
+				window.clearInterval(t);//show(n);
+			},
+			function(){
+				t=window.setInterval(function(){show(k)},2000);
+			}
+		);
+		$(".banner_an ul li").eq(0).trigger("mouseleave");
+		function show(n){
+			var width=840;//$("#content li:eq(0)").height();
+			var scrool=-(n*width)+"px";/**/
+			$(".banner_an ul li:eq("+n+")").css("background","#000").siblings().css("background","#fff")//$(".banner_img ul li:eq("+n+")").css("display","block").siblings().css("display","none")
+			n++;
+			$(".banner_img").animate(
+				{'left':scrool},1000
+			)	
+			if(n==$(".banner_an ul li").length){  //获取临界值 防止BUG
+				k=0;
+			}else{
+				k=n;
+			}
+		}
+		//banner图特效 end
+		/*$(".banner_img,.bn_left,.bn_right").mouseover(function(){
+			window.clearInterval(t);
+		})
+		$(".banner_img,.bn_left,.bn_right").mouseout(function(){
+			t=window.setInterval(function(){show(k)},2000);
+		})
+		$(".bn_left").click(function(){
+			$(".banner_img").animate(
+				{'left':scrool},1000
+			)
+			alert($(this).index())
+		})
+		$(".bn_right").click(function(){
+			alert($(this).index())
+			$(".banner_img").animate(
+				{'left':scrool},1000
+			)
+		})*/
+		
+		//banner_foot图片滚动特效 start
+		var l=0;
+		var h;
+		$(".foot_kj ul li").hover(   //鼠标进入和出去的事件
+			function(){
+				window.clearInterval(h);//show(n);alert($(this).index())
+			},
+			function(){
+				h=window.setInterval(function(){shou(l)},2000);
+			}
+		);
+		$(".foot_kj ul li").eq(0).trigger("mouseleave");
+		function shou(j){
+			var height=142;//$("#content li:eq(0)").height();
+			var scrooh=-(j*height)+"px";
+			j++;
+			$(".foot_kj").animate(
+				{'top':scrooh},1000
+			)	
+			if(j==$(".foot_kj ul").length){
+				l=0;
+			}else{
+				l=j;
+			}
+		}
+		//banner_foot图片滚动特效 end
+	});
+</script>
+<title>Dior_Vip</title>
+</head>
+
+<body>
+	<div class="dior">
+       <div class="top">
+           <div class="up">
+               <div class="up_con">
+                    <div class="left">
+                        欢迎您来到会员中心！
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="li_1"><a href="#" target="_blank">じょうど<img src="images/xl.png"/></a>
+                                <ul>
+                                    <li><a href="#" target="_blank">切换用户</a></li>
+                                    <li><a href="#" target="_blank">注销</a></li>
+                                    <li><a href="#" target="_blank">退出</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_1"><a href="#" target="_blank">我的订单<img src="images/xl.png"/></a>
+                                <ul>
+                                    <li><a href="#" target="_blank">所有订单</a></li>
+                                    <li><a href="#" target="_blank">待发货</a></li>
+                                    <li><a href="#" target="_blank">待收货</a></li>
+                                    <li><a href="#" target="_blank">待评价</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_1"><a href="#" target="_blank">客服中心</a></li>
+                            <li class="li_1"><a href="#" target="_blank">dior导航<img src="images/xl.png"/></a>
+                                <ul>
+                                    <li><a href="#" target="_blank">香氛</a></li>
+                                    <li><a href="#" target="_blank">彩妆</a></li>
+                                    <li><a href="#" target="_blank">护肤</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    		</div>
+           <div class="down">
+            	<div class="down_con clearfix">
+                	<div class="logo clearfix">
+                    	<h1 class="h_1">Dior</h1>
+                        <h1 class="h_2">会员中心</h1>
+                    </div>
+                    <div class="sea_gwc clearfix">
+                    	<input class="searching" type="text" value="真我香水" />
+                        <input class="search" type="button" value="" />
+                        <a href="#" target="_parent"><img src="images/gwc_b.png" />购物车</a>
+                    </div>
+                </div>
+            </div>
+           <div class="nav">
+            	<div class="nav_con">
+                	<ul>
+                    	<li class="other " id="all">
+                        	<a href="#" target="_blank">所有商品</a>
+                        	<ul>
+                            	<li><a href="#" target="_blank">香氛</a></li>
+                                <li><a href="#" target="_blank">彩妆</a></li>
+                                <li><a href="#" target="_blank">护肤</a></li>
+                                <li><a href="#" target="_blank">香氛</a></li>
+                                <li><a href="#" target="_blank">彩妆</a></li>
+                                <li><a href="#" target="_blank">护肤</a></li>
+                                <li><a href="#" target="_blank">香氛</a></li>
+                                <li><a href="#" target="_blank">彩妆</a></li>
+                                <li><a href="#" target="_blank">护肤</a></li>
+                                <li><a href="#" target="_blank">彩妆</a></li>
+                            </ul>
+                        </li>
+                        <li class="other "><a href="#" target="_blank">首页</a></li>
+                        <li class="other "><a href="#" target="_blank">产品中心</a></li>
+                        <li class="other "><a href="#" target="_blank">会员中心</a></li>
+                        <li class="other "><a href="#" target="_blank">企业资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+       </div>
+       <div class="space_hx"></div>
+       <div class="space_hx"></div>
+       <div class="content">
+           <div class="zero">
+            	<div class="zero_left">
+                	<div class="first clearfix">
+                    	<div class="myphoto clearfix"><img src="images/vip_tx.png" /></div>
+                        <div class="myname"><span>ごくらくじょうど</span></div>
+                        <!--<div class="space_hx"></div>--><br/><br/><br/>
+                        <div class="ohyo"><a href="#" target="_blank"><img src="images/vip_fz.png" /><span>粉钻会员</span></a>您好！</div>
+                        <!--<div class="space_hx"></div>--><br/>
+                        <div class="fore">
+                            <span>dior券：</span>
+                            <a href="#" target="_blank">5</a>张
+                            <span class="hx">dior币：</span>
+                            <a href="#" target="_blank">35</a>个
+                        </div>
+                	</div>
+                    <div class="second">
+                    	<div class="dj">距离升级为皇钻会员还有<a href="#" target="_blank">2356</a>点经验值，<a href="#" target="_blank">查看等级记录</a></div>
+                        <div class="qd"><a href="#" target="_blank">签到</a></div>
+                        <div class="yh">再连续签到2天即可获得120元优惠券。<a href="#" target="_blank">规则>></a></div>
+                	</div>
+                    <div class="third">
+                    	<div class="third_tt">我的<br/>特权</div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_1.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_2.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_3.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_4.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_5.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_06.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_07.png" /></a></div>
+                        <div class="third_tq"><a href="#" target="_blank"><img src="images/vip_tq_08.png" /></a></div>
+                	</div>
+                </div>
+                <div class="zero_right">
+                	<div class="banner">
+                    	<div class="banner_img">
+                        	<ul>
+                            	<li class="img_bn_1"><a href="#" target="_blank"><img src="images/vip_bn_1.png" /></a></li>
+                                <li class="img_bn_2"><a href="#" target="_blank"><img src="images/vip_bn_2.png" /></a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="banner_l_r">
+                        	<ul>
+                            	<li class="bn_left"><img src="images/vip_bn_lt.png" /></li>
+                                <li class="bn_right"><img src="images/vip_bn_rt.png" /></li>
+                            </ul>
+                        </div>-->
+                        <div class="banner_an">
+                        	<ul>
+                            	<li class="an_l "></li>
+                                <li class="an_r "></li>
+                            </ul>
+                        </div>
+                	</div>
+                    <div class="ban_foot">
+                    	<div class="foot_kj">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_1.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_1.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_1.png" /></a></li>     
+                            </ul>	
+                            <ul class="kj_li_1">
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_2.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_2.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_2.png" /></a></li>
+                            </ul>
+                            <ul class="kj_li_2">
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_3.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_3.png" /></a></li>
+                                <li><a href="#" target="_blank"><img src="images/vip_bn_ft_3.png" /></a></li>
+                            </ul>
+                        </div>
+                	</div>
+                </div>
+            </div>
+            <div class="space_hx"></div>
+            <div class="space_hx"></div>
+            <div class="one">
+            	<div class="one_tt clearfix">
+                	<div class="tt_left clearfix">
+                    	<h1><strong>1F</strong></h1>
+                        <span>Dior币超值兑换</span>
+                    </div>
+                	<div class="tt_right">
+                        <a href="#" target="_blank">兑换记录</a>|
+                        <a href="#" target="_blank">查看更多</a>
+                    </div>
+                </div>
+                <dl class="one_dp">
+                	<dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>DIOR迪奥男士淡香水</strong><br/>
+                    淡香水<br/>
+                    喷装60ML-价值：￥680.00<br/></a>
+                    代金券<br/>
+                    7899个Dior币<a class="dp_dh" href="#" target="_blank">立即兑换</a></dd>
+                </dl>
+                <dl class="one_dp">
+                	<dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>DIOR迪奥男士淡香水</strong><br/>
+                    淡香水<br/>
+                    喷装60ML-价值：￥680.00<br/></a>
+                    代金券<br/>
+                    7899个Dior币<a class="dp_dh" href="#" target="_blank">立即兑换</a></dd>
+                </dl>
+                <dl class="one_dp">
+                	<dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>DIOR迪奥男士淡香水</strong><br/>
+                    淡香水<br/>
+                    喷装60ML-价值：￥680.00<br/></a>
+                    代金券<br/>
+                    7899个Dior币<a class="dp_dh" href="#" target="_blank">立即兑换</a></dd>
+                </dl>
+                <dl class="one_dp">
+                	<dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>DIOR迪奥男士淡香水</strong><br/>
+                    淡香水<br/>
+                    喷装60ML-价值：￥680.00<br/></a>
+                    代金券<br/>
+                    7899个Dior币<a class="dp_dh" href="#" target="_blank">立即兑换</a></dd>
+                </dl>
+                <dl class="one_dp">
+                	<dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>DIOR迪奥男士淡香水</strong><br/>
+                    淡香水<br/>
+                    喷装60ML-价值：￥680.00<br/></a>
+                    代金券<br/>
+                    7899个Dior币<a class="dp_dh" href="#" target="_blank">立即兑换</a></dd>
+                </dl>
+            </div>
+            <div class="space_hx"></div>
+            <div class="space_hx"></div>
+            <div class="two">
+            	<div class="two_tl  clearfix">
+                	<div class="tl_left  clearfix">
+                    	<h1><strong>2F</strong></h1>
+                        <span>高额Dior券秒杀</span>
+                    </div>
+                	<div class="tl_right clearfix">
+                        <a href="#" target="_blanks">查看战利品</a>
+                    </div>
+                </div>
+                <dl class="two_yh">
+                	<dt><a href="#" target="_blank"><img src="images/vip_yh-25.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>25元优惠券</strong><br/>
+                    <a class="yh_dh" href="#" target="_blank">已抢光</a><br/>
+                    剩余<a href="#" target="_blank">0</a>份</dd>
+                </dl>
+                <dl class="two_yh">
+                	<dt><a href="#" target="_blank"><img src="images/vip_yh-25.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>25元优惠券</strong><br/>
+                    <a class="yh_dh" href="#" target="_blank">已抢光</a><br/>
+                    剩余<a href="#" target="_blank">0</a>份</dd>
+                </dl>
+                <dl class="two_yh">
+                	<dt><a href="#" target="_blank"><img src="images/vip_yh-10.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>10元优惠券</strong><br/>
+                    <a class="yh_dh" href="#" target="_blank">已抢光</a><br/>
+                    剩余<a href="#" target="_blank">0</a>份</dd>
+                </dl>
+                <dl class="two_yh">
+                	<dt><a href="#" target="_blank"><img src="images/vip_yh-35.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>35元优惠券</strong><br/>
+                    <a class="yh_dh" href="#" target="_blank">已抢光</a><br/>
+                    剩余<a href="#" target="_blank">0</a>份</dd>
+                </dl>
+                <dl class="two_yh">
+                	<dt><a href="#" target="_blank"><img src="images/vip_yh-45.png" /></a></dt>
+                    <dd><a href="#" target="_blank"><strong>45元优惠券</strong><br/>
+                    <a class="yh_dh" href="#" target="_blank">已抢光</a><br/>
+                    剩余<a href="#" target="_blank">0</a>份</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="space_hx"></div>
+        <div class="space_hx"></div>
+        <div class="foot clearfix">
+        	<div class="foot_con">
+            	<div class="foot_1 clearfix">
+                	<div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">新手帮助</a></li>
+                            <li><a href="#" target="_blank">正品保证</a></li>
+                            <li><a href="#" target="_blank">玩转Dior</a></li>
+                            <li><a href="#" target="_blank">常见问题</a></li>
+                            <li><a href="#" target="_blank">优惠指南</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">购物指南</a></li>
+                            <li><a href="#" target="_blank">发货时间</a></li>
+                            <li><a href="#" target="_blank">配送运费</a></li>
+                            <li><a href="#" target="_blank">签收/验货</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">支付/配送</a></li>
+                            <li><a href="#" target="_blank">货到付款</a></li>
+                            <li><a href="#" target="_blank">网上支付</a></li>
+                            <li><a href="#" target="_blank">配送时间</a></li>
+                            <li><a href="#" target="_blank">配送查询</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">售后服务</a></li>
+                            <li><a href="#" target="_blank">退换货政策</a></li>
+                            <li><a href="#" target="_blank">退换货办理</a></li>
+                            <li><a href="#" target="_blank">退款说明</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">会员服务</a></li>
+                            <li><a href="#" target="_blank">建议反馈</a></li>
+                            <li><a href="#" target="_blank">CEO邮箱</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001">7*24小时电话</li>
+                            <li><a href="#" target="_blank">400-8008-258</a></li>
+                            <li class="li_002"><a href="#" target="_blank"><img src="images/lxdior.png" />联系Dior</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="space_hx"></div>
+            <div class="foot_2">
+                <a href="#" target="_blank">了解Dior</a>|
+                <a href="#" target="_blank">联系Dior</a>|
+                <a href="#" target="_blank">媒体报道</a>|
+                <a href="#" target="_blank">版权声明</a>|
+                <a href="#" target="_blank">友情链接</a>|
+                <a href="#" target="_blank">加入Dior</a>|
+                <a href="#" target="_blank">网站联盟</a>|
+                <a href="#" target="_blank">商务合作</a>|
+                <a href="#" target="_blank">网站导航</a>|
+                <a href="#" target="_blank">分类大全</a>|
+                <a href="#" target="_blank">问题大全</a>
+                <div class="space_hx"></div>
+                <p>Copyright © 2008 - 2017 Dior Inc. Dior商城网  版权所有    <a href="#" target="_blank">粤ICP备14013125号</a></p>
+            </div>
+    	</div>
+    </div>
+</body>
+</html>

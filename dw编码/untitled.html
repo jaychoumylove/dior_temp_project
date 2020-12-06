@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="CSS/base_1.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/product_xiangqing.css"/>
+<link rel="stylesheet" type="text/css" href="Css/foot.css"/>
+<title>产品详情页--测试</title>
+<script type="text/javascript" src="JS/jquery.min.js"></script>
+<script type="text/javascript" src="JS/jquery.imagezoom.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//伪淘宝放大镜特效 start
+		$(".show_Dior").imagezoom();
+		$("#p_list li .list_Dior a").mouseover(function(){
+			$(this).parents(".list_Dior").parents("li").addClass("l-selected").siblings().removeClass("l-selected");
+			$(".show_Dior").attr('src',$(this).find("img").attr("mid"));
+			$(".show_Dior").attr('rel',$(this).find("img").attr("big"));
+		});
+		//伪淘宝放大镜特效 end
+		//鼠标进入分享淡入淡出特效 start
+		$(".product_share").hover(function(){
+			$(".share_list").show(1000);
+		},function(){
+			$(".share_list").hide(1000);
+		});
+		//鼠标进入分享淡入淡出特效 end
+		//鼠标点击关注切换图片特效 start
+		$(".concern").click(function(){
+			var url=$(this).find("img").attr("src");
+			if(url==$(this).find("img").attr("concern_yes")){
+				$(this).find("img").attr('src',$(this).find("img").attr("concern_no"));
+				$(".concern span").html("点我关注");
+			}else{
+				$(this).find("img").attr('src',$(this).find("img").attr("concern_yes"));
+				$(".concern span").html("我要取消");
+			}
+		})
+		//鼠标点击关注切换图片特效 end
+		//鼠标选择规格特效 start
+		$(".color_1,.size_1").click(function(){
+			$(this).addClass("selected").siblings().removeClass("selected");
+		})
+		//鼠标选择规格特效 end
+		//滑动门特效 start
+		$(".ifmn_tt ul li").each(function(i){
+			$(this).click(function(){
+				$(this).addClass("sece_li").siblings().removeClass("sece_li");
+				$(".inf_tt_con:eq("+i+")").slideDown(500).siblings(".inf_tt_con").slideUp(500);
+			})
+		})
+		//滑动门特效 end
+		//加的效果 start
+		$(".jia").click(function(){
+			var n=$(this).prev().val();
+			var num=parseInt(n)+1;
+			if(num==0){return;}
+			$(this).prev().val(num);
+		})
+		//加的效果 end
+		//减的效果 start
+		$(".jian").click(function(){
+			var m=$(this).prev().prev().val();
+			var nun=parseInt(m)-1;
+			if(nun==0){return;}
+			$(this).prev().prev().val(nun);
+		})
+		//减的效果 end
+		//鼠标进入显示隐藏特效 start
+		$(".pl_mid").hover(function(){
+			$(this).find("ul").fadeIn(500);
+		},function(){
+			$(this).find("ul").fadeOut(500);
+		})
+		//鼠标进入显示隐藏特效 end
+		//鼠标进入蒙版特效start
+		$(".main_rx .dp_1").mouseover(function(){
+			$(".dp_0").fadeIn(500);
+		})
+		$(".main_rx .dp_0").mouseout(function(){
+			$(".dp_0").fadeOut(500);
+		})
+		//鼠标进入蒙版特效end
+	})
+</script>
+</head>
+
+<body>
+	<div class="body_content">
+    	<!--顶部开始-->
+    	<div class="top" id="top">
+        	<!--顶部链接开始-->
+            <div class="top_link">
+                <div class="top_link_left">
+                    <a href="#" target="_blank">收藏</a>
+                    <a href="#" target="_blank">关注</a>
+                </div>
+                <div class="top_link_right">
+                    <a href="#" target="_blank">登录</a>
+                    <a href="#" target="_blank">注册</a>
+                    <a href="#" target="_blank">个人中心</a>
+                    <a href="#" target="_blank">购物车</a>
+                </div>
+            </div>
+            <!--顶部链接结束-->
+            <!--搜索开始-->
+            <div class="search">
+                <div class="logo">
+                	<img src="Images/logo.jpg" />
+                </div>
+                <div class="search_box">
+                    <div class="search_box_left"></div>
+                    <div class="search_box_right">
+                        <img src="Images/search.png">
+                        <p>搜索</p>
+                    </div>
+                </div>
+            </div>
+            <!--搜索结束-->
+            <div class="clearfix"></div>
+            <!--导航条开始-->
+            <div class="nav">
+            	<ul>
+                    <li><a href="#" target="_blank">所有商品分类</a></li>
+                    <li><a href="#" target="_blank">首页</a></li>
+                    <li><a href="#" target="_blank">产品中心</a></li>
+                    <li><a href="#" target="_blank">会员中心</a></li>
+                    <li><a href="#" target="_blank">企业资讯</a></li>
+                </ul>
+            </div>
+            <!--导航条结束-->
+            <div class="clearfix"></div>
+        </div>
+        <!--顶部结束-->
+        <!--主体开始-->
+        <div class="main">
+        	<div class="space_hx"></div>
+        	<div class="main_left clearfix">
+            	<div class="product_show">
+                    <a href="#"><img src="Images/product_1.jpg" alt="Dior" rel="Images/product_1_max.jpg" class="show_Dior" style="opacity: 1"/></a>
+                </div>
+                <div class="space_hx"></div>
+                <div class="space_hx"></div>
+                <ul class="product_list" id="p_list">
+                    <li class="l-selected"><div class="list_Dior"><a><img src="Images/product_1_mix.jpg" mid="Images/product_1.jpg" big="Images/product_1_max.jpg"></a></div></li>
+                    <li><div class="list_Dior"><a><img src="Images/product_2_mix.jpg" mid="Images/product_2.jpg" big="Images/product_2_max.jpg"></a></div></li>
+                    <li><div class="list_Dior"><a><img src="Images/product_1_mix.jpg" mid="Images/product_1.jpg" big="Images/product_1_max.jpg"></a></div></li>
+                    <li><div class="list_Dior"><a><img src="Images/product_2_mix.jpg" mid="Images/product_2.jpg" big="Images/product_2_max.jpg"></a></div></li>
+                    <li><div class="list_Dior"><a><img src="Images/product_1_mix.jpg" mid="Images/product_1.jpg" big="Images/product_1_max.jpg"></a></div></li>
+                </ul>
+                <br/><br/><br/><br/><br/>
+                <div class="product_share clearfix">
+                	<div class="share">分享至<img src="Images/fenxiang.png" /></div>
+                    <ul class="share_list clearfix">
+                        <li><a href="#" target="_blank"><img src="Images/sinaweibo.png" /></a></li>
+                        <li><a href="#" target="_blank"><img src="Images/wchat_friend.png" /></a></li>
+                        <li><a href="#" target="_blank"><img src="Images/QQkj.png" /></a></li>
+                        <li><a href="#" target="_blank"><img src="Images/wchat.png" /></a></li>
+                        <li><a href="#" target="_blank"><img src="Images/QQ.png" /></a></li>
+                    </ul>
+                    <div class="concern"><span>点我关注</span><img src="Images/gzax_1.png" concern_yes="Images/gzax_2.png" concern_no="Images/gzax_1.png" /></div>
+                </div>
+            </div>
+            <div class="mian_right">
+            	<h5>Dior迪奥Miss dior花漾甜心小姐女士淡香水50/100ml花漾甜心</h5>
+                <div class="introduce">
+                	<ul>
+                        <li class="li_01">价格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥&nbsp;&nbsp;&nbsp;&nbsp;<span>830.00-1180</span></li>
+                        <li class="li_02">促销价&nbsp;&nbsp;&nbsp;&nbsp;<span>￥&nbsp;&nbsp;&nbsp;&nbsp;588.00-848.00</span></li>
+                        <li class="li_03">领券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&nbsp;&nbsp;&nbsp;&nbsp;满599-30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+                    </ul>
+                </div>
+                <div class="sale">
+                	<div class="word_01">运费&nbsp;&nbsp;&nbsp;&nbsp;广东深圳 至 长沙&nbsp;&nbsp;&nbsp;&nbsp;快递：0.00</div>
+                    <div class="word_02">月销量<span class="span_01">431</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;评价累计<span class="span_01">1675</span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;送Dior积分&nbsp;&nbsp;<span class="span_02">294</span></div>
+                </div>
+                <div class="type">
+                    <ul class="color">
+                    	<li class="color_0"><strong>选择颜色</strong></li>
+                        <li class="color_1"><a><img src="Images/Dior_txxj.jpg" />甜心小姐</a></li>
+                        <li class="color_1 selected"><a><img src="Images/Dior_hytx.jpg" />花漾甜心</a></li>
+                    </ul>
+                    <ul class="size">
+                        <li class="size_0"><strong>选择规格</strong></li>
+                        <li class="size_1 selected"><a>50ml</a></li>
+                        <li class="size_1"><a>100ml</a></li>
+                    </ul>
+                    <ul class="goumai">
+                    	<li class="jia_n">
+                            <input type="text" class="many" value="1" />
+                            <a class="jia">+</a>
+                            <a class="jian">-</a>
+                        </li>
+                        <li><a class="gwc" href="#" target="_blank"><img src="Images/gwc_w.png" />加入购物车</a></li>
+                        <li><a class="yjg" href="#" target="_blank">一键购</a></li>
+                    </ul>
+                    <div class="space_hx"></div>
+                    <ul class="promise">
+                        <li><a href="#" target="_blank"><img src="Images/icon_1.gif" />订单险</a></li>
+                        <li><a href="#" target="_blank"><img src="Images/icon_2.gif" />7天无理由</a></li>
+                    </ul>
+                    <div class="space_hx"></div>
+                    <ul class="pay">
+                        <li><a href="#" target="_blank"><img src="Images/icon_3.gif" />快捷支付</a></li>
+                        <li><a href="#" target="_blank"><img src="Images/icon_4.gif" />信用卡</a></li>
+                        <li><a href="#" target="_blank"><img src="Images/icon_5.gif" />余额宝</a></li>
+                        <li><a href="#" target="_blank"><img src="Images/icon_6.jpg" />蚂蚁花呗</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="main_rx clearfix">
+                <div class="rx_tt clearfix">
+                    <strong><h1>热销推荐</h1></strong>
+                    <a class="more" href="#" target="_blank">more</a>
+                </div>
+                <dl class="dp_1">
+                    <dt><a href="#" target="_blank"><img src="Images/dcp.png" /></a></dt>
+                    <dd><a href="#" target="_blank">DIOR迪奥男士淡香水</a>
+                        <a href="#" target="_blank"><p class="p_2">淡香水</p></a>
+                        <br/>
+                        <a href="#" target="_blank"><p class="p_3">喷装60ML-￥680.00</p></a>
+                     </dd>
+                </dl>
+                <div class="dp_0">
+                </div>
+            </div>
+            <div class="space_hx"></div>
+            <div class="space_hx"></div>
+            <div class="main_ft">
+            	<div class="you_love">
+                	<h1 class="u_love_tt">
+                    	猜你喜欢
+                    </h1>
+                    <dl class="dp_1">
+                        <dt><a href="#" target="_blank"><img src="Images/product_003.jpg" /></a></dt>
+                        <dd><a href="#" target="_blank">迪奥dior 花漾甜心小姐女士香水100ml 甜心小姐</a>
+                            <a href="#" target="_blank"><p class="p_2">淡香水</p></a>
+                            <br/>
+                            <a href="#" target="_blank"><p class="p_3">喷装100ML-￥1024.00</p></a>
+                         </dd>
+                     </dl>
+                    <dl class="dp_1">
+                        <dt><a href="#" target="_blank"><img src="Images/product_003.jpg" /></a></dt>
+                        <dd><a href="#" target="_blank">迪奥dior 花漾甜心小姐女士香水100ml 甜心小姐</a>
+                            <a href="#" target="_blank"><p class="p_2">淡香水</p></a><br/>
+                            <a href="#" target="_blank"><p class="p_3">喷装100ML-￥1024.00</p></a>
+                         </dd>
+                     </dl>
+                    <dl class="dp_1">
+                        <dt><a href="#" target="_blank"><img src="Images/product_003.jpg" /></a></dt>
+                        <dd><a href="#" target="_blank">迪奥dior 花漾甜心小姐女士香水100ml 甜心小姐</a>
+                            <a href="#" target="_blank"><p class="p_2">淡香水</p></a><br/>
+                            <a href="#" target="_blank"><p class="p_3">喷装100ML-￥1024.00</p></a>
+                         </dd>
+                     </dl>
+                    <dl class="dp_1">
+                        <dt><a href="#" target="_blank"><img src="Images/product_003.jpg" /></a></dt>
+                        <dd><a href="#" target="_blank">迪奥dior 花漾甜心小姐女士香水100ml 甜心小姐</a>
+                            <a href="#" target="_blank"><p class="p_2">淡香水</p></a><br/>
+                            <a href="#" target="_blank"><p class="p_3">喷装100ML-￥1024.00</p></a>
+                         </dd>
+                     </dl>
+                </div>
+                <div class="information clearfix">
+                	<div class="ifmn_tt clearfix">
+                    	<ul>
+                        	<li class="sece_li">商品详情</li>
+                            <li>客户评价</li>
+                        </ul>
+                    </div>
+                    <div class="inf_tt_con" style="display:block">
+                        <div class="info_con">
+                            <div class="inf_one">
+                                <div class="one_lt">
+                                    <h1>品牌名称：Dior/迪奥</h1>
+                                    <p>产品参数：<br />产品名称：Dior/迪奥 花漾甜心小姐女士淡香水 花漾甜心<br />化妆品保质期: 60个月<br />限期使用日期范围: 2018-10-10至2018-10-10<br />颜色分类: 透明<br />香水分类: 淡香水EDT<br />净含量: 50mL 100mL 30mL<br />香调: 花香调 花果香调 树木香调 混合香调<br />规格类型: 正常规格<br />适用性别: 女<br />品牌: Dior/迪奥<br />Dior/迪奥单品: 花漾甜心淡香水喷雾(新香)<br />产地: 法国<br />保质期: 5年</p>
+                                </div>
+                                <div class="one_rt">
+                                    <img src="Images/shangping_1.jpg" />
+                                </div>
+                            </div>
+                            <div class="inf_two">
+                                <img src="Images/shangping-2.jpg" />
+                            </div>
+                            <div class="space_hx"></div>
+                            <div class="inf_three">
+                                <h1>产品详情图</h1>
+                                <div class="space_hx"></div>
+                                <img src="Images/product_inf.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inf_tt_con" style="display:none">
+                    	<div class="rev_top">
+                        	<div class="top_tt">
+                            	<strong><h1>商品评价</h1></strong>
+                            </div>
+                            <div class="top_con">
+                            	<div class="space_hx"></div>
+                            	<div class="con_left">
+                                	<p class="p_01">97<span>%</span></p>
+                                    <p class="p_02">好评度</p>
+                                </div>
+                                <div class="con_mid">
+                                    <dl>
+                                        <dt>好&nbsp;&nbsp;评:<span>(97%)</span></dt>
+                                        <dd><div class="hp"></div></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>中&nbsp;&nbsp;评:<span>(&nbsp;&nbsp;0%)</span></dt>
+                                        <dd><div class="zp"></div></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>差&nbsp;&nbsp;评:<span>(&nbsp;&nbsp;3%)</span></dt>
+                                        <dd><div class="cp"></div></dd>
+                                    </dl>
+                                </div>
+                                <dl class="con_right">
+                                	<dt>客户印象:</dt>
+                                    <dd>味道好闻</dd>
+                                    <dd>后味好闻</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="rev_con">
+                            <ul class="rev_tt">
+                                <li><a href="#" target="_blank">所有评论</a></li>
+                                <li><a href="#" target="_blank">好评</a></li>
+                                <li><a href="#" target="_blank">中评</a></li>
+                                <li><a href="#" target="_blank">差评</a></li>
+                            </ul>
+                            <div class="space_hx"></div>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <ul class="rev_pl">
+                            	<li>
+                                	<dl class="pl_left">
+                                    	<dt><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /><img src="Images/hp_1.png" /></dt>
+                                        <dd style="color:#666">2017年1月2日15:46:46</dd>
+                                        <dd style="color:#999">花漾甜心</dd>
+                                    </dl>
+                                    <div class="pl_mid clearfix">
+                                    	<p>这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评这是我的好评</p>
+                                        <ul style="display:none">
+                                        	<li><a href="#" target="_blank">赞<span>(22)</span></a></li>
+                                        	<li><a href="#" target="_blank">踩<span>(2)</span></a></li>
+                                        	<li><a href="#" target="_blank">回复<span>(2)</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <dl class="pl_right">
+                                    	<dt><img src="Images/xtx_kh.png" />ごくらく</dt>
+                                        <dd style="color:#999">粉钻会员  湖南</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--主体结束-->
+        <!--尾部开始-->
+        <div class="space_hx"></div>
+        <div class="space_hx"></div>
+        <div class="foot clearfix">
+        	<div class="foot_con">
+            	<div class="foot_1 clearfix">
+                	<div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">新手帮助</a></li>
+                            <li><a href="#" target="_blank">正品保证</a></li>
+                            <li><a href="#" target="_blank">玩转Dior</a></li>
+                            <li><a href="#" target="_blank">常见问题</a></li>
+                            <li><a href="#" target="_blank">优惠指南</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">购物指南</a></li>
+                            <li><a href="#" target="_blank">发货时间</a></li>
+                            <li><a href="#" target="_blank">配送运费</a></li>
+                            <li><a href="#" target="_blank">签收/验货</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">支付/配送</a></li>
+                            <li><a href="#" target="_blank">货到付款</a></li>
+                            <li><a href="#" target="_blank">网上支付</a></li>
+                            <li><a href="#" target="_blank">配送时间</a></li>
+                            <li><a href="#" target="_blank">配送查询</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">售后服务</a></li>
+                            <li><a href="#" target="_blank">退换货政策</a></li>
+                            <li><a href="#" target="_blank">退换货办理</a></li>
+                            <li><a href="#" target="_blank">退款说明</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">会员服务</a></li>
+                            <li><a href="#" target="_blank">建议反馈</a></li>
+                            <li><a href="#" target="_blank">CEO邮箱</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001">7*24小时电话</li>
+                            <li><a href="#" target="_blank">400-8008-258</a></li>
+                            <li class="li_002"><a href="#" target="_blank"><img src="images/lxdior.png" />联系Dior</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="space_hx"></div>
+            <div class="foot_2">
+                <a href="#" target="_blank">了解Dior</a>|
+                <a href="#" target="_blank">联系Dior</a>|
+                <a href="#" target="_blank">媒体报道</a>|
+                <a href="#" target="_blank">版权声明</a>|
+                <a href="#" target="_blank">友情链接</a>|
+                <a href="#" target="_blank">加入Dior</a>|
+                <a href="#" target="_blank">网站联盟</a>|
+                <a href="#" target="_blank">商务合作</a>|
+                <a href="#" target="_blank">网站导航</a>|
+                <a href="#" target="_blank">分类大全</a>|
+                <a href="#" target="_blank">问题大全</a>
+                <div class="space_hx"></div>
+                <p>Copyright © 2008 - 2017 Dior Inc. Dior商城网  版权所有    <a href="#" target="_blank">粤ICP备14013125号</a></p>
+            </div>
+    	</div>
+        <!--尾部开始-->
+    </div>
+</body>
+</html>

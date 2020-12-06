@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+<link rel="stylesheet" type="text/css" href="css/personal-top.css"/>
+<link rel="stylesheet" type="text/css" href="css/personal_grzlcon.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".li_1").hover(
+			function(){
+				$(this).children("ul").show();
+				$(this).find("img").attr("src","images/sl.png");
+			},
+			function(){
+				$(this).children("ul").hide();
+				$(this).find("img").attr("src","images/xl.png");
+			}	
+		)
+	})
+</script>
+<title>Dior_个人资料</title>
+</head>
+
+<body>
+	<div class="dior">
+       <div class="top">
+           <div class="up">
+            	<div class="up_con">
+                    <div class="left">
+                        <a href="#" target="_blank">会员中心</a>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="li_1">亲~欢迎来到个人中心！</li>
+                            <li class="li_1"><a href="#" target="_blank">ごくらく<img src="images/xl.png"/></a>
+                                <ul style="display:none">
+                                    <li><a href="#" target="_blank">切换用户</a></li>
+                                    <li><a href="#" target="_blank">注销</a></li>
+                                    <li><a href="#" target="_blank">退出</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_1"><a href="#" target="_blank">我的订单<img src="images/xl.png"/></a>
+                                <ul style="display:none">
+                                    <li><a href="#" target="_blank">所有订单</a></li>
+                                    <li><a href="#" target="_blank">待发货</a></li>
+                                    <li><a href="#" target="_blank">待收货</a></li>
+                                    <li><a href="#" target="_blank">待评价</a></li>
+                                </ul>
+                            </li>
+                            <li class="li_1"><a href="#" target="_blank">客服中心</a></li>
+                            <li class="li_1"><a href="#" target="_blank">dior导航<img src="images/xl.png"/></a>
+                                <ul style="display:none">
+                                    <li><a href="#" target="_blank">香氛</a></li>
+                                    <li><a href="#" target="_blank">彩妆</a></li>
+                                    <li><a href="#" target="_blank">护肤</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    		</div>
+           <div class="down">
+           		<div class="down_con">
+                    <div class="logo">
+                        <a href="#" target="_blank">我的dior购</a>
+                    </div>
+                    <div class="left">
+                        <ul>
+                       		<li>个人中心</li>
+                            <li><a href="#" target="_blank">首页</a></li>
+                            <li><a href="#" target="_blank">账户设置</a></li>
+                            <li><a href="#" target="_blank">找回密码</a></li>
+                            <li><a href="#" target="_blank">消息</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <input class="searching" type="text" value="真我香水"  />
+                        <input class="search" type="button" value="" />
+                        <a href="#" target="_parent"><img src="images/gwc.png" />购物车</a>
+                    </div>
+                </div>
+    		</div>
+        </div>
+       <div class="content">
+           <div class="con_con">
+               <div class="left">
+					<div class="caid">
+                    	<img src="images/cd.png" />
+                        <span>交易管理</span>
+                    </div>
+                    <ul>
+                        <li><a href="#" target="_blank">我的订单</a></li>
+                        <li><a href="#" target="_blank">我的消息</a></li>
+                        <li><a href="#" target="_blank">我的评论</a></li>
+                        <li><a href="#" target="_blank">退款/退货</a></li>
+                    </ul>
+                    <div class="caid">
+                        <img src="images/cd.png" />
+                        <span>账户管理</span>
+                    </div>
+                    <ul>
+                        <li class="special"><a href="#" target="_blank">我的资料</a></li>
+                        <li><a href="#" target="_blank">收货地址</a></li>
+                        <li><a href="#" target="_blank">我的收藏</a></li>
+                        <li><a href="#" target="_blank">我的dior币</a></li>
+                        <li><a href="#" target="_blank">我的dior券</a></li>
+                        <li><a href="#" target="_blank">修改密码</a></li>
+                    </ul>
+                </div>
+               <div class="right clearfix">
+               	   <div class="per_1 clearfix">
+                       <div class="title_1">
+                            <div class="tt_1_1">
+                                <h1><strong>基本资料</strong></h1>
+                            </div>
+                            <div class="tt_1_2">
+                                <a href="#" target="_blank">修改密码</a>
+                            </div>
+                        </div>
+                       <div class="tt_1_left">
+                            <ul>
+                                <li>昵称：<input class="one" type="text" placeholder="请输入你的昵称" /></li>
+                                <li>性别：
+                                    <label>
+                                        <input class="two" name="sex" type="radio" value="" />男
+                                        <input class="two" name="sex" type="radio" value="" />女
+                                    </label>
+                                </li>
+                                <li class="three">出生年月日：1995.09.12
+                                    
+                                    <!--<select class="three" size="1" name="year" id="year">
+                                        <option value="年份" selected="selected">年份</option>
+                                        年
+                                    </select>
+                                    <select class="three" size="1" name="mouth" id="mouth">
+                                        <option value="月份" selected="selected">月份</option>
+                                        月
+                                    </select>
+                                    <select class="three" size="1" name="day" id="day">
+                                        <option value="日期" selected="selected">日期</option>
+                                        日
+                                    </select>-->
+                                </li>
+                                <li>手机：<input class="four" type="text"  placeholder="请输入你的手机号码" /></li>
+                                <li>邮箱：<input class="five" type="text" placeholder="请输入你的邮箱账号" /></li>
+                            </ul>
+                        </div>
+                       <div class="tt_1_right">
+                            <img src="images/tx_big.jpg" /><br/><br/>
+                            <div class="file"><input type="file" name="fileUpload" /><br/></div>
+                            <div class="space_hx"></div>
+                            <input class="six" type="submit" value="上传" />
+                        </div>
+                       <div class="space_hx"></div>
+                       <div class="space_hx"></div>
+                       <input class="seven" type="submit" value="确认修改" />
+                   </div>
+                </div>
+                <div class="con_tj clearfix">
+                    <div class="tj_tt clearfix">
+                        <strong><h1>热销推荐</h1></strong>
+                        <a class="more" href="#" target="_blank">more</a>
+                    </div>
+                    <dl class="dp_1">
+                        <dt><a href="#" target="_blank"><img src="images/dcp.png" /></a></dt>
+                        <dd><a href="#" target="_blank">DIOR迪奥男士淡香水</a>
+                            <a href="#" target="_blank"><p class="p_2">淡香水</p></a>
+                            <br/>
+                            <a href="#" target="_blank"><p class="p_3">喷装60ML-￥680.00</p></a>
+                         </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="space_hx"></div>
+        <div class="space_hx"></div>
+        <div class="foot clearfix">
+        	<div class="foot_con">
+            	<div class="foot_1 clearfix">
+                	<div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">新手帮助</a></li>
+                            <li><a href="#" target="_blank">正品保证</a></li>
+                            <li><a href="#" target="_blank">玩转Dior</a></li>
+                            <li><a href="#" target="_blank">常见问题</a></li>
+                            <li><a href="#" target="_blank">优惠指南</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">购物指南</a></li>
+                            <li><a href="#" target="_blank">发货时间</a></li>
+                            <li><a href="#" target="_blank">配送运费</a></li>
+                            <li><a href="#" target="_blank">签收/验货</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">支付/配送</a></li>
+                            <li><a href="#" target="_blank">货到付款</a></li>
+                            <li><a href="#" target="_blank">网上支付</a></li>
+                            <li><a href="#" target="_blank">配送时间</a></li>
+                            <li><a href="#" target="_blank">配送查询</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">售后服务</a></li>
+                            <li><a href="#" target="_blank">退换货政策</a></li>
+                            <li><a href="#" target="_blank">退换货办理</a></li>
+                            <li><a href="#" target="_blank">退款说明</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001"><a href="#" target="_blank">会员服务</a></li>
+                            <li><a href="#" target="_blank">建议反馈</a></li>
+                            <li><a href="#" target="_blank">CEO邮箱</a></li>
+                        </ul>
+                    </div>
+                    <div class="li_01">
+                        <ul>
+                        	<li class="li_001">7*24小时电话</li>
+                            <li><a href="#" target="_blank">400-8008-258</a></li>
+                            <li class="li_002"><a href="#" target="_blank"><img src="images/lxdior.png" />联系Dior</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="space_hx"></div>
+            <div class="foot_2">
+                <a href="#" target="_blank">了解Dior</a>|
+                <a href="#" target="_blank">联系Dior</a>|
+                <a href="#" target="_blank">媒体报道</a>|
+                <a href="#" target="_blank">版权声明</a>|
+                <a href="#" target="_blank">友情链接</a>|
+                <a href="#" target="_blank">加入Dior</a>|
+                <a href="#" target="_blank">网站联盟</a>|
+                <a href="#" target="_blank">商务合作</a>|
+                <a href="#" target="_blank">网站导航</a>|
+                <a href="#" target="_blank">分类大全</a>|
+                <a href="#" target="_blank">问题大全</a>
+                <br/>
+                <br/>
+                <p>Copyright © 2008 - 2017 Dior Inc. Dior商城网  版权所有    <a href="#" target="_blank">粤ICP备14013125号</a></p>
+            </div>
+    	</div>
+    </div>
+</body>
+</html>

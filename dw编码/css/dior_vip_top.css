@@ -1,0 +1,32 @@
+a:hover{text-decoration:none}
+.dior{width:100%;margin:0 auto; font-family:Microsoft yahei;}
+.dior .top{ width:100%;}
+.dior .top .up{ background:#f0eeee; height:20px;}
+.dior .top .up .up_con{width:1200px;margin:0 auto; color:#000; text-align:center;}
+.dior .top .up .up_con .left{width:170px; line-height:20px;}
+.dior .top .up .up_con .right{ margin-left:800px; margin-top:-20px;}
+.dior .top .up .up_con .right ul .li_1{float:left; line-height:20px; margin-left:20px;}
+.dior .top .up .up_con .right ul li a img{margin-left:5px;}
+.dior .top .up .up_con .right ul li ul{display:none; position:absolute; top:20px; background:#f0eeee;text-align:center; width:60px;}
+.dior .top .up .up_con .right ul li ul li{line-height:20px;height:20px}
+.dior .top .down{height:70px;}
+.dior .top .up .up_con .right ul li ul li a{color:#000;}
+.dior .top .down .down_con{width:1200px; margin:0 auto; color:#000; text-align:center;}
+.dior .top .down .down_con .logo{ float:left;width:340px; }
+.dior .top .down .down_con .logo .h_1{ float:left;font-size:30px; margin-left:90px; line-height:70px;}
+.dior .top .down .down_con .logo .h_2{ float:left; font-size:18px; /*line-height:70px;*/ margin-left:50px; margin-top:28px; color:#333;}
+.dior .top .down .down_con .sea_gwc{width:840px; float:left; margin-left:20px; line-height:70px;}
+.dior .top .down .down_con .sea_gwc .searching{ width:300px; height:30px; padding-left:20px; margin-left:20px; color:#999}
+.dior .top .down .down_con .sea_gwc .search{ height:30px; width:30px; border:1px #000 solid; background:url(../images/search.png) #fff;}
+.dior .top .down .down_con .sea_gwc a{display:inline-block; margin-left:20px; font-size:14px; color:#000;}
+.dior .top .down .down_con .sea_gwc a img{ margin-left:10px;}
+.dior .top .nav{ background:#000; height:40px;}
+.dior .top .nav .nav_con{width:1200px;margin:0 auto; color:#FFF; text-align:center;}
+.dior .top .nav .nav_con ul{margin-left:80px;}
+.dior .top .nav .nav_con ul .other{float:left; line-height:40px; height:40px; width:160px; text-align:center;}
+.dior .top .nav .nav_con ul .special{ background:#FFE5FF;}
+.dior .top .nav .nav_con ul .special a{ color:#000;}
+.dior .top .nav .nav_con ul li a{ color:#FFF;}
+.dior .top .nav .nav_con ul #all{ position:relative;}
+.dior .top .nav .nav_con ul #all ul{ display:none;position:absolute; top:40px; width:160px; right:0px;}
+.dior .top .nav .nav_con ul #all ul li{ background:#FFE5FF; line-height:40px; height:40px;}

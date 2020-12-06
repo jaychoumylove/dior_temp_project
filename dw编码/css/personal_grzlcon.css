@@ -1,0 +1,33 @@
+.dior .content{ margin-top:20px;}
+.dior .content .con_con{width:1200px; margin:0 auto;}
+.dior .content .con_con .left{width:170px; border:#CCC 1px solid; text-align:center; float:left;}
+.dior .content .con_con .left .caid{line-height:30px; height:30px; width:170px; text-align:center; font-size:14px; background:#EAEAEA;border-bottom:#CCC 1px solid;}
+.dior .content .con_con .left .caid img{margin-right:10px;}
+.dior .content .con_con .left ul .special{background:#FFF;color:#000;}
+.dior .content .con_con .left ul li{line-height:30px; height:30px; width:170px;background:#f0eeee; border-bottom:#CCC 1px solid;}
+.dior .content .con_con .left ul li:hover{background:#FFF;}
+.dior .content .con_con .left ul li a{font-size:14px;}
+.dior .content .con_con .left ul li a:hover{color:#000; text-decoration:none;}
+.dior .content .con_con .right{float:left; width:720px; margin-left:20px;}
+.dior .content .con_con .right .per_1{ float:left;}
+.dior .content .con_con .right .per_1 .title_1{font-size:14px;;line-height:30px; height:30px;border-bottom:#999 1px solid;}
+.dior .content .con_con .right .per_1 .title_1 .tt_1_1{border-bottom:#F69 1px solid; float:left;padding-right:10px;padding-left:10px;}
+.dior .content .con_con .right .per_1 .title_1 .tt_1_2{ float:left;padding-left:10px;}
+.dior .content .con_con .right .per_1 .tt_1_left{float:left;padding:40px;}
+.dior .content .con_con .right .per_1 .tt_1_left ul li{ line-height:20px; height:20px; margin-bottom:20px;}
+.dior .content .con_con .right .per_1 .tt_1_left ul .one{color:#999;padding-left:10px; border:none; background:url(../images/nc_xk.png) no-repeat;width:150px;height:20px; line-height:20px;}
+.dior .content .con_con .right .per_1 .tt_1_left ul .two{margin-left:10px; margin-right:10px;}
+.dior .content .con_con .right .per_1 .tt_1_left ul .three span{ display:inline-block; font-size:14px;width:40px;height:20px; line-height:20px; text-align:center; margin-left:10px;}
+.dior .content .con_con .right .per_1 .tt_1_left ul .four{ background:url(../images/sj_yx_xk.png) no-repeat;width:150px;height:20px; line-height:20px; border:none;color:#999;padding-left:10px; }
+.dior .content .con_con .right .per_1 .tt_1_left ul .five{background:url(../images/yx_xk.png) no-repeat;width:200px;height:20px; line-height:20px; border:none;color:#999;padding-left:10px;}
+.dior .content .con_con .right .per_1 .tt_1_right{float:left; margin-top:40px; margin-left:140px;}
+.dior .content .con_con .right .per_1 .tt_1_right .file{border:#CCC solid 1px;}
+.dior .content .con_con .right .per_1 .tt_1_right .six{background:url(../images/sc_xk.png) no-repeat; width:60px; height:20px; line-height:20px; text-align:center; border:none; margin:0 auto; display:block;}
+.dior .content .con_con .right .per_1 .seven{background:url(../images/qrxg_xk.png) no-repeat;width:60px; height:30px; height:30px; text-align:center; border:none; margin:0 auto; display:block;}
+.dior .content .con_con .con_tj{border:#999 solid 1px; float:left; width:270px;}
+.dior .content .con_con .con_tj .tj_tt{ background:#333;height:40px; line-height:40px; text-align:center;}
+.dior .content .con_con .con_tj .tj_tt strong h1{ font-size:14px; color:#FFF;}
+.dior .content .con_con .con_tj .tj_tt .more{float:right; color:#FFF; margin-top:-40px; margin-right:20px;}
+.dior .content .con_con .con_tj .dp_1{margin-left:30px;}
+.dior .content .con_con .con_tj .dp_1 dd .p_2{color:#666;}
+.dior .content .con_con .con_tj .dp_1 dd .p_3{color:#999;}
